@@ -28,15 +28,19 @@ export function Form(props) {
     const [mail, setMail] = useState("");
     const [passWd, setpassWd] = useState("");
     const [conf, setConf] = useState("");
+    const [submitted, setSubmitted] = useState(false);
 
     const createUser = (e) => {
         e.preventDefault();
         const newUser = { fName, lName, mail, passWd, conf };
+        setSubmitted(true)
         console.log("Welcome, ", newUser);
     }
+
     return (
         <>
             <Container>
+                <h3>{submitted ? "Thank you for your submission" : "Please fill out the form"}</h3>
                 <form onSubmit={createUser}>
                     <div>
                         <label htmlFor="">First Name:</label>
