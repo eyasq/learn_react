@@ -19,7 +19,10 @@ export default function Todolist() {
                             const newList = [...todolist];
                             newList[i] = { ...newList, text: newList[i].text, checked: !newList[i].checked };
                             setList(newList)
-                        }} /></li>
+                        }} /> - <button onClick={() => {
+                            const newList = todolist.filter((el) => el !== todolist[i])
+                            setList(newList)
+                        }}>Delete</button> </li>
                     )
                     )}
                 </ul>
