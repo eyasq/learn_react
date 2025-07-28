@@ -1,17 +1,14 @@
 
+import { useState } from 'react'
 import './App.css'
-import { Form } from '../components/userForm'
-import { MovieForm } from '../components/movieForm'
-
+import { Groceries } from '../components/groceries'
+import { ColorBoxes } from '../components/ColorBoxes'
 function App() {
 
 
   return (
     <>
-
-      <Form></Form>
-      <MovieForm></MovieForm>
-
+      <ColorBoxes></ColorBoxes>
     </>
   )
 }
