@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useState } from "react";
-const Container = styled.div`
+export const Container = styled.div`
     max-width:600px;
     margin:0 auto;
     padding:2rem;
     `
-const Input = styled.input`
+export const Input = styled.input`
     box-sizing:border-box;
     margin:0;
     padding:0.5rem;
@@ -22,7 +22,7 @@ const Button = styled.button`
         color:white;
     }
 `
-export function Form(props) {
+export function Form() {
     const [fName, setfName] = useState("");
     const [lName, setlName] = useState("");
     const [mail, setMail] = useState("");

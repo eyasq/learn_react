@@ -1,6 +1,8 @@
 
 import './App.css'
 import { Form } from '../components/userForm'
+import { MovieForm } from '../components/movieForm'
+
 function App() {
 
 
@@ -8,6 +10,7 @@ function App() {
     <>
 
       <Form></Form>
+      <MovieForm></MovieForm>
 
     </>
   )
