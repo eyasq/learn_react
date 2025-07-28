@@ -1,14 +1,16 @@
 
+// eslint-disable-next-line no-unused-vars
 import { useState } from 'react'
 import './App.css'
-import { Groceries } from '../components/groceries'
-import { ColorBoxes } from '../components/ColorBoxes'
+import { TabbedView } from '../components/tabs'
+
 function App() {
 
 
   return (
     <>
-      <ColorBoxes></ColorBoxes>
+      <TabbedView></TabbedView>
+
     </>
   )
 }
