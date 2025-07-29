@@ -1,15 +1,22 @@
 
 // eslint-disable-next-line no-unused-vars
 import { useState } from 'react'
+import { Navbar } from '../components/nav'
+import { MyContext } from './context/context'
+import { Form } from '../components/form'
 import './App.css'
-import Todolist from '../components/todo'
 
 function App() {
-
+  const [name, setName] = useState("")
 
   return (
     <>
-      <Todolist></Todolist>
+      <MyContext.Provider value={{ name, setName }}>
+        <Navbar></Navbar>
+        <Form></Form>
+
+
+      </MyContext.Provider>
     </>
   )
 }
