@@ -3,11 +3,12 @@
 import { useState } from 'react'
 import './App.css'
 import { Form } from '../components/validForm'
+import { Pokefitcher } from '../components/pokemon'
 function App() {
 
   return (
     <>
-      <Form></Form>
+      <Pokefitcher />
     </>
   )
 }
