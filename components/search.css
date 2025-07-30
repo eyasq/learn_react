@@ -1,0 +1,14 @@
+.Searchbar{
+    width:80%;
+    padding:2rem;
+    background-color: rgb(225, 210, 210);
+    margin:0 auto;
+}
+select,span,input{
+    font-size: 1.25rem;
+    margin:.5rem;
+}
+.id{
+    font-size: 1rem;
+    width:10%;
+}
