@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import './search.css'
+import { SearchContext } from "./context";
 export function SearchForm() {
+    const { setContext } = useContext(SearchContext)
     const [query, setQuery] = useState("")
     const [resource, setResource] = useState("");
     async function handleSubmit(e) {
@@ -11,12 +13,15 @@ export function SearchForm() {
                 const results = await fetch(APILink)
                 const parsedResults = await results.json()
                 console.log(parsedResults)
-                // NOW ADD THE RESULTS TO THE CONTEXT
+                setContext(parsedResults)
+
             } else {
                 try {
                     const results = await fetch(`${APILink}${query}`)
                     const parsedResults = await results.json();
                     console.log(parsedResults)
+                    setContext(parsedResults)
+
                 } catch (e) {
                     console.log("This droid aint in the DB!", e)
                 }
@@ -29,12 +34,14 @@ export function SearchForm() {
                 const results = await fetch(APILink)
                 const parsedResults = await results.json()
                 console.log(parsedResults)
-                // NOW ADD THE RESULTS TO THE CONTEXT
+                setContext(parsedResults)
+
             } else {
                 try {
                     const results = await fetch(`${APILink}${query}`)
                     const parsedResults = await results.json();
-                    console.log(parsedResults)
+                    setContext(parsedResults)
+
                 } catch (e) {
                     console.log("This droid aint in the DB!", e)
                 }

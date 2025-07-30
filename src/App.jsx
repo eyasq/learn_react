@@ -3,16 +3,17 @@
 import { useState } from 'react'
 import { SearchForm } from '../components/searchform'
 import { SearchContext } from '../components/context'
+import { Display } from '../components/display'
 import './App.css'
 
 function App() {
-  const [context, setContext] = useState(null);
+  const [context, setContext] = useState({});
 
   return (
     <>
       <SearchContext.Provider value={{ context, setContext }}>
         <SearchForm></SearchForm>
-
+        <Display></Display>
       </SearchContext.Provider>
     </>
   )
